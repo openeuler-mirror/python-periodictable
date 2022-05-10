@@ -1,7 +1,7 @@
 %global _empty_manifest_terminate_build 0
 Name:		python-periodictable
 Version:	1.6.0
-Release:	1
+Release:	2
 Summary:	Extensible periodic table of the elements
 License:	public domain
 URL:		https://github.com/pkienzle/periodictable
@@ -27,6 +27,7 @@ Provides:	python3-periodictable-doc
 %description help
 Development documents and examples for periodictable
 
+%prep
 %autosetup -n periodictable-1.6.0
 
 %build
@@ -67,5 +68,8 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Tue May 17 2022 lvxiaoqian <xiaoqian@nj.iscas.ac.cn>
+- fix build issue
+
 * Sun May 23 2021 Python_Bot <Python_Bot@openeuler.org>
 - Package Spec generated
